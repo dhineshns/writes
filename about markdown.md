@@ -17,15 +17,15 @@ Writing in Markdown is meant to be easy. With just the following cheatsheet one 
 * Begin with ###### 
  * ``` ###### Smallest Header ```
 
-### Links
+#### Links
 * Wrap in [] with text and followed by () with url 
  * ``` [my website](www.dhineshns.com) ```
 
-### Images
+#### Images
 * Begin with ! followed by [] and () with image url. 
  * ``` ![](https://storage.googleapis.com/daily-wp-uploads/1/2015/08/kfc-bucket.png)```
 
-### Quotes
+#### Quotes
 * Begin with > on every line   
  * ``` > Jack of all trades. Master of captcha.```
 
@@ -36,10 +36,10 @@ Writing in Markdown is meant to be easy. With just the following cheatsheet one 
  * Monday
 ```
 
-### Code
+#### Code
 * Surround with ``` 
 
 
-### Horizontal Line
+#### Horizontal Line
 * Three underscores 
  * ``` ---- ```
