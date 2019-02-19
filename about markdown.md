@@ -1,13 +1,12 @@
-Writing in Markdown is meant to be easy. With just the following cheatsheet one can get started immediately. 
-
+# Markdown Cheatsheet
 #### Italics 
-* surround with _ 
+* Surround with _ 
  * ```_italics_ ```
 #### Bold 
-* surround with * 
+* Surround with * 
  * ```*bold*```
 #### Extra Bold  
-* surround with **
+* Surround with **
  * ```**extra bold**```
 
 #### Biggest Header 
