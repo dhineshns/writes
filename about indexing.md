@@ -28,6 +28,6 @@
 
 ### Paritial indexes 
 * When we know that we query only for a particular value, we can create an index just for that value
-> SELECT message FROM messages WHERE processed = 'NO' AND receiver = ?
-> CREATE INDEX messages_todo ON (receiver) WHERE prcessed = 'N'
+ * > SELECT message FROM messages WHERE processed = 'NO' AND receiver = ?
+ * > CREATE INDEX messages_todo ON (receiver) WHERE prcessed = 'N'
 
