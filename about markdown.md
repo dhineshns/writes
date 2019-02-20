@@ -29,10 +29,10 @@
  * ``` > Jack of all trades. Master of captcha.```
 
 #### Nested Bullet points
-* Begin with * and indent with Space for nesting.
+* Begin with * and indent with two Space for nesting.
 ``` 
 * Week
- * Monday
+  * Monday <---- two spaces in the beginning
 ```
 
 #### Code
