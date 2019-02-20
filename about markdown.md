@@ -42,3 +42,10 @@
 #### Horizontal Line
 * Three underscores 
  * ``` ---- ```
+ 
+#### New Line
+* Two spaces at the end of the line
+``` 
+Heads  <----- (two spaces)
+Tails 
+```
