@@ -22,6 +22,7 @@
   * Querying all the users who are male. 
   * This is because the heap access part of the index is really slow. 
 * Use bind variables as much as possible, because when the connection is established the optimizer creates a query plan and that plan will be used for all the remaining query hits. 
+* The more complex the statement the more important using bind parameters becomes. Not using bind parameters is like recompiling a program every time. 
 
 ### Range queries
 * Rule of thumb : In concatenated indexes, index for equality comes first and then ranges. 
@@ -30,4 +31,39 @@
 * When we know that we query only for a particular value, we can create an index just for that value
  > SELECT message FROM messages WHERE processed = 'NO' AND receiver = ?  
  > CREATE INDEX messages_todo ON (receiver) WHERE prcessed = 'N'
+ 
+### Dealing with dates
+* When you deal with dates in queries, either range or equalify quries, it is a good idea to have the date column in a sorted order by indexing. 
+
+### Joins
+* Hash Join is used when table is huge and the other table is small. 
+  * The smaller table is usually hashed into memory. 
+  * If an index can help to reduce the size of the table by random access, the optimizer will choose that. This will enable hash join instead of nested loop join. 
+  
+### Powers of Indexes
+* Through B-tree we can randomly access rows 
+* Through linkedlist in the B-tree we can leverage sorted order of the indexes in compound indexes. 
+  * This is particularly useful in range scans
+* Index saves the database from sorting that needs to happen during order by, group by operation. 
+
+### Index only access
+* If your index has all the rows that the index selects and constraints, there's no need for heap table access and the queries run really fast. 
+
+### Partial Results 
+* When you use order by and limit only to top 5, indexes are the most useful because it saves the database from sorting step.
+* Pagination can be made very simple in webapps by this manner. Since indexes provide N rows one after the other with out sort step.
+
+### DML and Indexes
+* Inserts are generally slower with indexes because the write needs to happen on the indexes as well. 
+* Delete is faster with indexes when we have where statements that filters out the rows. But there's a negative side where the row has to be deleted in all indexes. 
+* Update is very similar to delete. 
+
+### Myths
+* Indexes do not degenerate over time with update and delete statements. 
+* Choose concatenated index based on the where clause in queries. An index with three columns can be used when searching for the first column, when searching with the first two columns together, and when searching using all columns.
+* Whenever possible avoid select *
+  * The more selective in columns you are the smaller hash joins, sorting memory foot print gets. Even helps with index only queries. 
+
+
+
 
