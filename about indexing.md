@@ -23,11 +23,20 @@
   * This is because the heap access part of the index is really slow. 
 * Use bind variables as much as possible, because when the connection is established the optimizer creates a query plan and that plan will be used for all the remaining query hits. 
 * The more complex the statement the more important using bind parameters becomes. Not using bind parameters is like recompiling a program every time. 
+* The optimizer decides to use the index when the result set is smaller. Likewise when the result set grows bigger and bigger it decides against it. 
 
 ### Range queries
 * Rule of thumb : In concatenated indexes, index for equality comes first and then ranges. 
+* Creating index for the column in where clause that has a range constraint will result in much faster query results. 
+  * Consider the consumer complaints dataset : 
+    * > explain select * from consumer_complaints_medium where complaint_id > 468905 and complaint_id <= 469905;
+    * After creating index the cost of execution reduced from 3000 to 10 when the result has only 40 rows. 
+  * For queries with much larger number of result rows, the index scan is actually slower, and optimizer will not use it. 
+    * > explain select * from consumer_complaints_medium where complaint_id > 468905;
+    * The total number of rows is 65000 and the optimizer decided that the Seq Scan is faster than Index Scan. 
 
-### Paritial indexes 
+
+### Partial indexes 
 * When we know that we query only for a particular value, we can create an index just for that value
  > SELECT message FROM messages WHERE processed = 'NO' AND receiver = ?  
  > CREATE INDEX messages_todo ON (receiver) WHERE prcessed = 'N'
@@ -45,7 +54,9 @@
 * Through linkedlist in the B-tree we can leverage sorted order of the indexes in compound indexes. 
   * This is particularly useful in range scans
 * Index saves the database from sorting that needs to happen during order by, group by operation. 
-
+  * > explain select * from consumer_complaints_medium order by complaint_id;
+    * The above query with index created uses the index for sort step. The cost reduced from 27000 to 3000. 
+    
 ### Index only access
 * If your index has all the rows that the index selects and constraints, there's no need for heap table access and the queries run really fast. 
 
@@ -63,6 +74,10 @@
 * Choose concatenated index based on the where clause in queries. An index with three columns can be used when searching for the first column, when searching with the first two columns together, and when searching using all columns.
 * Whenever possible avoid select *
   * The more selective in columns you are the smaller hash joins, sorting memory foot print gets. Even helps with index only queries. 
+  
+  
+### Explain query
+* Gather phase means the optimizer has decided to execute the query in parallel. 
 
 
 
