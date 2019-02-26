@@ -24,6 +24,8 @@
 * Use bind variables as much as possible, because when the connection is established the optimizer creates a query plan and that plan will be used for all the remaining query hits. 
 * The more complex the statement the more important using bind parameters becomes. Not using bind parameters is like recompiling a program every time. 
 * The optimizer decides to use the index when the result set is smaller. Likewise when the result set grows bigger and bigger it decides against it. 
+* Try to partition (by day, month or year) the table based on timeseries column if exists. If most of the queries range based timequeries. 
+  * This reduces the query time even with indexes for extremely large tables. 
 
 ### Range queries
 * Rule of thumb : In concatenated indexes, index for equality comes first and then ranges. 
