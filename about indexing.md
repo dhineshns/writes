@@ -26,6 +26,8 @@
 * The optimizer decides to use the index when the result set is smaller. Likewise when the result set grows bigger and bigger it decides against it. 
 * Try to partition (by day, month or year) the table based on timeseries column if exists. If most of the queries range based timequeries. 
   * This reduces the query time even with indexes for extremely large tables. 
+* Make sure that your indexes all of them fit in the RAM. If they can prewarming the RAM with indexes speeds up the read queries. 
+  * This avoids lazy loading of index pages into memory during query execution. 
 
 ### Range queries
 * Rule of thumb : In concatenated indexes, index for equality comes first and then ranges. 
