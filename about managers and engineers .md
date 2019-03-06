@@ -7,6 +7,7 @@
 * helps you navigate difficult times.
 * helps you understand what is important to focus on. 
 * shows how your day-to-day work contributes to the overall success of the company.
+* should listen intently and not spend all the time thinking about what to say next.
 
 ### A good engineer
 * should develop a sense of ownership and authority for his/her experience at work.
@@ -20,7 +21,6 @@
 1:1 meetings are essestial in forming a mutual trust between a manager and an engineer. 
 * Every engineer should share the responsibility of having a constructive 1:1 with their managers. 
 * Prepare what you'd like to share with your manager before hand. 
-
 
 
 
