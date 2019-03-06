@@ -15,6 +15,7 @@
 * should ask for feedback and take it graciously even when he/she doesn't agree with it. 
 * should not shy away from asking for it, when he/she needs something (help, raise, work-life balance, promotion).
 * should set a goal and do what he/she can to make it happen. 
+* should view communication as a corner stone of engineering. One should know the audience, communicate the intent of his/her action clearly. Documentations and presentations are tools that every engineer should use. 
 
 ### 1:1 Meetings
 1:1 meetings are essestial in forming a mutual trust between a manager and an engineer. 
@@ -22,4 +23,4 @@
 * Prepare what you'd like to share with your manager before hand. 
 
 ### Everyone Should Strive To Be A Leader
-It does not matter if you are an engineer or a manager, everyone should strive to be a leader. A leader listens intently and doesn't spend all the time thinking about what to say next. A leader creates a culture of excellence and enables peers to be do their best work. You are not a leader if you belive that correctness is so much more important than anything else; and it is always worth fighting hard for what you believe is correct. A leader should let of their identity  as the smartest person in the room. 
+It does not matter if you are an engineer or a manager, everyone should strive to be a leader. A leader listens intently and doesn't spend all the time thinking about what to say next. A leader creates a culture of excellence and enables peers to be do their best work. You are not a leader if you belive that correctness is so much more important than anything else; and it is always worth fighting hard for what you believe is correct. A leader should let go of their identity  as the smartest person in the room. 
