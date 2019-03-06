@@ -7,7 +7,6 @@
 * helps you navigate difficult times.
 * helps you understand what is important to focus on. 
 * shows how your day-to-day work contributes to the overall success of the company.
-* should listen intently and not spend all the time thinking about what to say next.
 
 ### A good engineer
 * should develop a sense of ownership and authority for his/her experience at work.
@@ -22,19 +21,5 @@
 * Every engineer should share the responsibility of having a constructive 1:1 with their managers. 
 * Prepare what you'd like to share with your manager before hand. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Everyone should strive to be a leader
+It does not matter if you are an engineer or a manager, everyone should strive to be a leader. A leader listens intently and doesn't spend all the time thinking about what to say next. A leader creates a culture of excellence and enables peers to be do their best work. You are not a leader if you belive that correctness is so much more important than anything else; and it is always worth fighting hard for what you believe is correct. A leader should let of their identity  as the smartest person in the room. 
