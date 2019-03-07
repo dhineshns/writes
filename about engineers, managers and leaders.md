@@ -5,7 +5,7 @@
 * should not rely on the manager to set the entire tone of their relationship. 
 * should realize uncertainty is a constant and utilize the manager's help to pull through during tough times. 
 * should ask for feedback and take it graciously even when he/she doesn't agree with it. 
-* should not shy away from asking for it, when he/she needs something (help, raise, work-life balance, promotion).
+* should not shy away from asking, when he/she needs something (help, raise, work-life balance, promotion).
 * should set a goal and do what he/she can to make it happen. 
 * should view communication as a corner stone of engineering. One should know the audience, communicate the intent of his/her action clearly. Documentations and presentations are tools that every engineer should use. 
 
