@@ -1,4 +1,4 @@
- ```
+
 class Solution:
     def uniquePathsIII(self, grid):
         R, C = len(grid), len(grid[0])
@@ -31,6 +31,17 @@ class Solution:
 
         dfs(sr, sc, todo)
         return self.ans
+
+
+
+
+
+
+
+
+
+
+
 
 
 from functools import lru_cache
@@ -69,4 +80,3 @@ class Solution:
             return ans
 
         return dp(sr, sc, target)
-```
